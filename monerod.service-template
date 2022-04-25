@@ -1,5 +1,5 @@
 [Unit]
-Description=monerod
+Description=monerod-service
 
 [Service]
 User=monerod
