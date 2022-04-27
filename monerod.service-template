@@ -1,12 +1,19 @@
 [Unit]
 Description=monerod-service
+After=network.target
+Wants=network.target
 
 [Service]
 User=monerod
 Group=monerod
+
 ExecStart=/opt/monerod/monerod --non-interactive --config-file=./bitmonero.conf 
 Restart=on-failure
-RestartSec=5s
+RestartSec=10s
+
+
+StandardOutput=journal
+StandardError=journal
 
 [Install]
 WantedBy=multi-user.target
