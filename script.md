@@ -49,11 +49,11 @@ Next we’re going to create a new user for our systems called “monerod”. Do
 
 This first command will add the new user, create a new user group under the same name and then set the home directory to that which we just moved.
 
-* `sudo useradd --user-group --home-dir=/opt/monerod monerod`
+`sudo useradd --user-group --home-dir=/opt/monerod monerod`
 
 Next we will change the owner of the monerod directory to match the username. This is give the monerod user the correct privileges to alter the files inside. 
 
-* `sudo chown -R monerod:monerod /opt/monerod`
+`sudo chown -R monerod:monerod /opt/monerod`
 
 Now that’s done we need to get on and specify the service we will be creating.
 
