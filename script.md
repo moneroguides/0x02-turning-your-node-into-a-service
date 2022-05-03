@@ -27,7 +27,7 @@ Today we'll be setting some rules to tell our service managers to run our Monero
 
 As usual, we will be covering Linux and Windows in separate sections. Please use the time stamps in the description to get where you want to be.
 
-### SETTING UP OUR SERVICE - LINUX
+### SETTING UP A SERVICE - LINUX
 
 As Linux users, we often find that things are slightly more complex and time consuming to get set up. 
 
@@ -81,7 +81,7 @@ To check that everything is running smoothly we have a few commands that we can 
 
 Now every time you start your PC your node will be up and running and if it ever fails, systemd will be there to restart it.
 
-### SETTING UP OUR SERVICE - WINDOWS
+### SETTING UP A SERVICE - WINDOWS
 
 Setting up your windows service is quite simple as its execution has been built into the daemon.
 
