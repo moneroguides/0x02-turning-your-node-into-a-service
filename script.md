@@ -93,7 +93,7 @@ If you followed our guide, or set your data directory manually, you should also 
 
 Our command will look like this:
 
-* C:\monerod\monerod.exe --install-service --data-dir C:\monerod\data
+* `C:\monerod\monerod.exe --install-service --data-dir C:\monerod\data`
 
 After pressing *enter* we can head to the *Services* application in Windows, where we will now find one called "Monero Daemon".
 
