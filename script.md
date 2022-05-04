@@ -122,3 +122,5 @@ If you have any questions please let us know either in the comments or via one o
 Finally, if you found this useful and want to send us a tip our address can be found on screen. 
 
 That’s it from us, see you in the next one.
+
+~moneroguides
