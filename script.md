@@ -38,11 +38,11 @@ We will continue by assuming you followed [our video](https://www.yewtu.be/watch
 
 The first thing we’re going to do is change the directory in which our monerod folder is located. 
 
-At the moment it's located in the home directory and we want it to be in the */opt/* directory. */opt/* aka “Option” or “Optional”, is traditionally used to hold software and programs which are run as an addition and independently of anything else.
+At the moment it's located in the home directory and we want it to be in the **/opt/** directory. **/opt/** aka “Option” or “Optional”, is traditionally used to hold software and programs which are run as an addition and independently of anything else.
 
 An advantage to using using this directory is that changes require elevated privileges and therefore cannot be altered easily.
 
-To do this, we are doing to use the *mv* command, followed by the current directory and then */opt/*.
+To do this, we are doing to use the *mv* command, followed by the current directory and then **/opt/**.
 
 * `sudo mv ~/monerod /opt/`
 
@@ -62,7 +62,7 @@ Finally we need to get on and specify the service we will be creating.
 
 Systemd is the name of the service manager typically found in Linux distributions. And it’s within its directory which we will need to place our config.
 
-With your favourite text editor, you will need to create a new file in the */lib/* directory.
+With your favourite text editor, you will need to create a new file in the **/lib/** directory.
 
 We’ll be using vim, and the following command:
 
@@ -95,7 +95,7 @@ Our command will look like this:
 
 * `C:\monerod\monerod.exe --install-service --data-dir C:\monerod\data`
 
-After pressing *enter* we can head to the *Services* application in Windows, where we will now find one called "Monero Daemon".
+After pressing **enter** we can head to the **Services** application in Windows, where we will now find one called "Monero Daemon".
 
 So that this service runs and restarts automatically, we will need to edit the configuration slightly.
 
