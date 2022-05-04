@@ -25,7 +25,7 @@ Typically you will have something called a service manager, which takes charge a
 
 Today we'll be defining some rules which will configure our service managers to both run our Monero Nodes in the background every time our PCs starts and restart them, when they fail.
 
-As usual, we will be covering Linux and Windows seperatly, so please use the time stamps in the description to get where you want to be.
+As usual, we will be covering Linux and Windows separately, so please use the time stamps in the description to get where you want to be.
 
 
 ### SETTING UP YOUR SERVICE - LINUX
@@ -38,7 +38,7 @@ We will continue by assuming you followed [our video](https://www.yewtu.be/watch
 
 The first thing we’re going to do is change the directory in which our monerod folder is located. 
 
-At the moment it's located in the home directory and we want it to be in the */opt/* directory. */opt/* aka “Option” or “Optional”, is traditionally used to hold software and programs which are run as an addition and idipendantly of anything else.
+At the moment it's located in the home directory and we want it to be in the */opt/* directory. */opt/* aka “Option” or “Optional”, is traditionally used to hold software and programs which are run as an addition and independently of anything else.
 
 An advantage to using using this directory is that changes require elevated privileges and therefore cannot be altered easily.
 
@@ -54,7 +54,7 @@ This first command will add the new user, create a new user group under the same
 
 Next we will change the owner of the monerod directory to match the username. This will give the monerod user the correct privileges to alter the files inside.
 
-The command we'll be using to do with is `chown` aka "change owenership" along with the R flag so that it does this recursively for all the subfolders. The final command should look something like this:
+The command we'll be using to do with is `chown` aka "change ownership" along with the R flag so that it does this recursively for all the subfolders. The final command should look something like this:
 
 * `sudo chown -R monerod:monerod /opt/monerod`
 
