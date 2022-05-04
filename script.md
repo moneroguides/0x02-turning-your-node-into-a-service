@@ -54,7 +54,7 @@ This first command will add the new user, create a new user group under the same
 
 Next we will change the owner of the monerod directory to match the username. This will give the monerod user the correct privileges to alter the files inside.
 
-The command we'll be using to do with is `chown` aka "change owenership" and we'll be adding the R flag so that it does this recursively for all the subfolders. The finall command should look something like this:
+The command we'll be using to do with is `chown` aka "change owenership" along with the R flag so that it does this recursively for all the subfolders. The final command should look something like this:
 
 * `sudo chown -R monerod:monerod /opt/monerod`
 
