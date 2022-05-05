@@ -7,7 +7,7 @@ Wants=network.target
 User=monerod
 Group=monerod
 
-ExecStart=/opt/monerod/monerod --non-interactive --config-file=./bitmonero.conf 
+ExecStart=/opt/monerod/monerod --non-interactive --config-file=/opt/monerod/bitmonero.conf 
 Restart=on-failure
 RestartSec=10s
 
