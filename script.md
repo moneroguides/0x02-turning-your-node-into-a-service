@@ -21,7 +21,7 @@ So without any further ado, let's get into it.
 
 ### WHAT IS A SERVICE?
 
-A service is a common way to describe a program that runs in the background of any Operating System (OS). Many programs run as services to make your computer use simple and stress free and probably happens without you even noticing.
+A service is a common way to describe a program that runs in the background of any Operating System (OS). Many programs run as services to make your computer use simple and stress free, probably without you even noticing.
 
 Typically you will have something called a service manager, which takes charge and deals with these programs for you. 
 
