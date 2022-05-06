@@ -36,7 +36,7 @@ As Linux users, we often find that things are slightly more complex and time con
 
 But as always, there are advantages.
 
-We will continue by assuming you followed [our video](https://www.yewtu.be/watch?v=XonyYxjjfcg) to set up your node. If you already have your node set up via other means. Please check out our video to understand how we approached things.
+We will continue by assuming you followed [our video](https://www.yewtu.be/watch?v=XonyYxjjfcg) to set up your node. If you already have your node set up via other means, please check out our video to understand how we approached things.
 
 The first thing we’re going to do is change the directory in which our **monerod** folder is located. 
 
@@ -44,7 +44,7 @@ At the moment it's located in the home directory and we want it to be in the */o
 
 An advantage to using using this directory is that changes require elevated privileges and therefore cannot be altered easily.
 
-To do this, we are doing to use the *mv* command, followed by the current directory and then */opt/*.
+To do this, we are going to use the *mv* command, followed by the current directory and then */opt/*.
 
 * `sudo mv ~/monerod /opt/`
 
@@ -79,7 +79,7 @@ All that’s left to do is reload systemd, enable our new service and then start
 * `sudo systemctl enable monerod.service`
 * `sudo systemctl start monerod.service`
 
-To check that everything is running smoothly we have a few commands that we can use. The command `systemctl status monerod`. If all is well, you should see that it is Active and running.
+To check that everything is running smoothly we can use the command `systemctl status monerod`. If all is well, you should see that it is Active and running.
 
 Now every time you start your PC your node will also be up and running and if it ever fails, systemd will be there to restart it.
 
@@ -97,7 +97,7 @@ Our command will look like this:
 
 * `C:\monerod\monerod.exe --install-service --data-dir C:\monerod\data`
 
-After pressing *enter* we can head to the *Services* application in Windows, where we will now find one called "Monero Daemon".
+After pressing *enter* we can head to the *Services* application in Windows where we'll now find one called "Monero Daemon".
 
 So that this service runs and restarts automatically, we will need to edit the configuration slightly.
 
@@ -119,8 +119,8 @@ If you're interested to know the status of your node you can also check the logs
 
 Well there you have it. Your node is now an integrated part of your computing experience.
 
-If you have any questions please let us know either in the comments or via one of our contact options on the [about section](https://moneroguides.org/about/) of our website.
+If you have any questions please let us know either in the comments or through one of our contact options on the [about section](https://moneroguides.org/about/) of our website.
 
-If you found this useful and want to send us a tip our address can be found on screen now. 
+If you found this useful and want to send us a tip, our address can be found on screen now. 
 
 Well, that’s it from us, see you in the next one.
