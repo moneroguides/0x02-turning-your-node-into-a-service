@@ -1,0 +1,317 @@
+0:00:06.009,0:00:07.828
+Hello again privacy fans!
+
+0:00:07.923,0:00:12.451
+Are you tired of initialising your Node manually
+every time you start your computer?
+
+0:00:12.916,0:00:17.439
+Do you wish there was a hands off, easy solution
+for restarting it when it fails?
+
+0:00:17.873,0:00:23.856
+Well, we've got good news for you, there is!
+and in this short video we'll be explaining how.
+
+0:00:24.369,0:00:27.220
+So without any further ado, let's get into
+it.
+
+0:00:33.527,0:00:39.241
+A service is a common way to describe a program
+that runs in the background of any Operating System (OS).
+
+0:00:39.980,0:00:45.250
+Many programs run as services to make your
+computer use simple and stress free, probably
+
+0:00:45.250,0:00:47.046
+without you even noticing.
+
+0:00:47.046,0:00:51.489
+Typically you will have something called a
+service manager, which takes charge and deals
+
+0:00:51.489,0:00:53.670
+with these programs for you.
+
+0:00:53.670,0:00:57.870
+Today we'll be defining some rules which will
+configure our service managers to both run
+
+0:00:57.870,0:01:03.834
+our Monero Nodes in the background every time
+our PCs starts and restart them when they fail.
+
+0:01:04.405,0:01:09.250
+As usual, we will be covering Linux and Windows
+separately, so please use the time stamps
+
+0:01:09.250,0:01:11.684
+in the description to get where you want to
+be.
+
+0:01:17.752,0:01:22.480
+As Linux users, we often find that things
+are slightly more complex and time consuming
+
+0:01:22.480,0:01:23.532
+to get set up.
+
+0:01:24.220,0:01:26.448
+But as always, there are advantages.
+
+0:01:27.019,0:01:31.120
+We will continue by assuming you followed
+our video to set up your node.
+
+0:01:31.120,0:01:36.220
+If you already have your node set up via other
+means, please check out our video to understand
+
+0:01:36.220,0:01:38.260
+how we approached things.
+
+0:01:38.260,0:01:42.510
+The first thing we’re going to do is change
+the directory in which our **monerod** folder
+
+0:01:42.510,0:01:43.164
+is located.
+
+0:01:44.486,0:01:50.150
+At the moment it's located in the home directory
+and we want it to be in the */opt/* directory.
+
+0:01:51.293,0:01:56.570
+*/opt/* aka “Option” or “Optional”,
+is traditionally used to hold software and
+
+0:01:56.570,0:02:01.550
+programs which are run as an addition and
+independently of anything else.
+
+0:02:01.550,0:02:06.340
+An advantage to using using this directory
+is that changes require elevated privileges
+
+0:02:06.340,0:02:08.636
+and therefore cannot be altered easily.
+
+0:02:09.440,0:02:14.879
+To do this, we are going to use the *mv* command,
+followed by the current directory and then
+
+0:02:14.879,0:02:15.731
+*/opt/*.
+
+0:02:17.022,0:02:22.519
+Now that's done, we’re going to create a
+new user for our system called “monerod”.
+
+0:02:22.519,0:02:27.409
+Doing this means we can isolate the privileges
+of the service to the working folder, which
+
+0:02:27.409,0:02:30.000
+is great for security amongst other things.
+
+0:02:30.893,0:02:36.260
+This next command will add the new user, create
+a new user group under the same name and then
+
+0:02:36.260,0:02:38.989
+set the home directory to that which we just
+created.
+
+0:02:40.000,0:02:45.340
+Next we will change the owner of the **monerod**
+directory to match the username.
+
+0:02:45.340,0:02:50.870
+This will give the monerod user the correct
+privileges to alter the files inside.
+
+0:02:50.870,0:02:58.670
+The command we'll be using to do with is `chown`
+aka "change ownership" along with the R flag
+
+0:02:58.670,0:03:02.193
+so that it does this recursively for all the
+subfolders.
+
+0:03:02.849,0:03:05.450
+The final command should look something like
+this:
+
+0:03:07.654,0:03:12.328
+Finally we need to get on and specify the
+service we will be creating.
+
+0:03:12.328,0:03:17.290
+Systemd is the name of the service manager
+typically found in Linux distributions.
+
+0:03:17.290,0:03:22.094
+And it’s within the **library** directory
+which we will need to place our config.
+
+0:03:22.094,0:03:25.900
+With your favourite text editor, you will
+need to create a new file.
+
+0:03:25.900,0:03:29.026
+We’ll be using vim, and the following command:
+
+0:03:30.121,0:03:35.209
+We have already put together a template for
+you to use, which can be found on our Github page.
+
+0:03:35.775,0:03:39.414
+Simply copy and paste it into the terminal
+and your done!
+
+0:03:39.414,0:03:43.739
+As always, double check to make sure nothing
+has been altered.
+
+0:03:43.739,0:03:49.860
+All that’s left to do is reload systemd,
+enable our new service and then start it.
+
+0:03:49.860,0:03:52.288
+We can do that with the next three commands:
+
+0:03:54.319,0:04:00.739
+To check that everything is running smoothly
+we can use the command `systemctl status monerod`.
+
+0:04:00.739,0:04:05.170
+If all is well, you should see that it is
+Active and running.
+
+0:04:05.170,0:04:10.040
+Now every time you start your PC your node
+will also be up and running and if it ever
+
+0:04:10.040,0:04:13.109
+fails, systemd will be there to restart it.
+
+0:04:13.109,0:04:17.860
+Remember, you can always check the logs in
+the data directory for more detailed information.
+
+0:04:25.042,0:04:30.760
+Setting up your Windows service is quite simple
+as its execution has been built into the daemon.
+
+0:04:30.760,0:04:35.590
+To install the daemon as a service, first
+run Powershell "as administrator".
+
+0:04:35.590,0:04:42.160
+If you already have a node and used the default
+directory, then you only need to add the "--install-service" flag.
+
+0:04:42.980,0:04:47.720
+If you followed our guide, or set your data
+directory manually, you should also include
+
+0:04:47.720,0:04:52.520
+the "--data-dir" flag, followed by the correct
+location.
+
+0:04:52.520,0:04:53.750
+Our command will look like this:
+
+0:04:54.930,0:04:59.150
+After pressing *enter* we can head to the
+*Services* application in Windows where we'll
+
+0:04:59.150,0:05:01.516
+now find one called "Monero Daemon".
+
+0:05:02.532,0:05:08.920
+So that this service runs and restarts automatically,
+we will need to edit the configuration slightly.
+
+0:05:08.920,0:05:13.239
+Right click on the service and select *Properties*.
+
+0:05:13.239,0:05:15.929
+First we want to change the startup type.
+
+0:05:15.929,0:05:20.200
+I'm going to select *Automatic*, with a delayed
+start.
+
+0:05:20.200,0:05:25.640
+This way I know that essential services like
+networking start ahead of it.
+
+0:05:25.640,0:05:29.420
+The next thing we want to turn our attention
+to is the *recovery* tab.
+
+0:05:29.907,0:05:34.530
+Here we can tell Windows what to do if the
+node fails for any reason.
+
+0:05:34.530,0:05:39.390
+For each failure, I want Windows to restart
+the Monero Daemon so that it's up an running
+
+0:05:39.390,0:05:41.540
+as much as possible.
+
+0:05:41.540,0:05:45.100
+After making those changes, we can start the
+process.
+
+0:05:45.100,0:05:48.940
+If you're already running the daemon, you
+should stop it first.
+
+0:05:48.940,0:05:50.230
+Success!
+
+0:05:50.230,0:05:54.080
+Your Node should now be running as a Windows
+service.
+
+0:05:54.080,0:05:58.450
+If you're interested to know the status of
+your node you can also check the logs.
+
+0:05:58.450,0:06:01.230
+Our logs are located in the data directory.
+
+0:06:01.230,0:06:05.552
+If for whatever reason you are unable to access
+your node, you should start with these.
+
+0:06:12.460,0:06:13.830
+Well there you have it.
+
+0:06:13.830,0:06:18.070
+Your node is now an integrated part of your
+computing experience.
+
+0:06:18.070,0:06:21.990
+If you have any questions please let us know
+either in the comments or through one of our
+
+0:06:21.990,0:06:25.960
+contact options on the about section of our
+website.
+
+0:06:25.960,0:06:30.825
+If you found this useful and want to send
+us a tip, our address can be found on screen now.
+
+0:06:31.317,0:06:34.365
+Well, that’s it from us, see you in the
+next one.
+
+0:06:35.190,0:06:36.360
+~moneroguides
