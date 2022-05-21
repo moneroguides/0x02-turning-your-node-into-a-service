@@ -1,0 +1,34 @@
+Prerequisites:
+
+    Local Monero Node
+
+.....................................................................
+
+0:00 INTRO
+0:29 WHAT IS A MSERVICE
+1:28 SETTING UP YOUR SERVICE - LINUX
+3:44 SETTING UP YOUR SERVICE - WINDOWS
+5:01 OUTRO
+
+.....................................................................
+
+sudo mv ~/monerod /opt/
+sudo useradd --user-group --home-dir=/opt/monerod monerod
+sudo chown -R monerod:monerod /opt/monerod
+sudo vim /lib/systemd/system/monerod.service
+sudo systemctl daemon-reload
+sudo systemctl enable monerod.service
+sudo systemctl start monerod.service
+systemctl status monerod
+C:\monerod\monerod.exe --install-service --data-dir C:\monerod\data
+
+.....................................................................
+
+01x02 Setting up your own node - https://www.yewtu.be/watch?v=XonyYxjjfcg
+Service template - https://raw.githubusercontent.com/moneroguides/0x02-turning-your-node-into-a-service/main/monerod.service-template
+MoneroGuides about - https://moneroguides.org/about/
+
+.....................................................................
+
+All contents of this video are valid on release, please keep in mind that future updates may mean that some steps are no longer required or information is invalid.
+If enough of these changes occur a new video will be released.
